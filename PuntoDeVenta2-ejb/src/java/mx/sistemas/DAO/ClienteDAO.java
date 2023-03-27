@@ -68,7 +68,6 @@ public class ClienteDAO implements Serializable{
     }
    
     public List<Cliente> getTodo(){
-        //hola rober
          Query q = em.createNamedQuery("Cliente.findAll");
         return q.getResultList();
     }
