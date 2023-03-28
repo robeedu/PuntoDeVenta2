@@ -9,7 +9,7 @@ import mx.sistemas.modelo.Ingreso;
 import mx.sistemas.modelo.Perfil;
 import mx.sistemas.modelo.Venta;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-03-28T15:58:21")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-03-28T16:22:02")
 @StaticMetamodel(Usuario.class)
 public class Usuario_ { 
 
