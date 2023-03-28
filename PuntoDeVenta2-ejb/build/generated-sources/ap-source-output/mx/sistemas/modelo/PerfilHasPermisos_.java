@@ -6,7 +6,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import mx.sistemas.modelo.Perfil;
 import mx.sistemas.modelo.Permiso;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-03-28T16:13:23")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-03-28T16:53:39")
 @StaticMetamodel(PerfilHasPermisos.class)
 public class PerfilHasPermisos_ { 
 
