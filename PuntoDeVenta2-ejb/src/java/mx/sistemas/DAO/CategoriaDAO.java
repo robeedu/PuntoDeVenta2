@@ -31,6 +31,8 @@ public CategoriaDAO(){
 }
 //robe y migue me la siguen pelando y feo pero feoo primo
 //robe  me la seguira pelando bien gacho
+//robe y migue me la siguen pelando y feo pero feoo primo
+//robe  me la seguira pelando bien gachosdfsdf
 public boolean crear(Categoria categoria){
     em.getTransaction().begin();
     em.persist(categoria);

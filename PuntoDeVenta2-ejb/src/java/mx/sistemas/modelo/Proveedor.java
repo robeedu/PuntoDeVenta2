@@ -67,11 +67,12 @@ public class Proveedor implements Serializable {
         this.id = id;
     }
 
-    public Proveedor(String id, String nombre, String telefono, String email) {
+    public Proveedor(String id, String nombre,String direccion, String telefono, String email) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
+        this.direccion=direccion;
     }
 
     public String getId() {
