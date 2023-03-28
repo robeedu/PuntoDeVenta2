@@ -26,6 +26,8 @@ public CategoriaDAO(){
     //rhoal robe
     //hola mmigus
     //aguanta
+    //ahora si
+    //orsles
 }
 public boolean crear(Categoria categoria){
     em.getTransaction().begin();
