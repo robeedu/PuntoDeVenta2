@@ -23,6 +23,7 @@ private EntityManager em;
 public CategoriaDAO(){
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("PuntodeVenta-ejbPU");
     em= emf.createEntityManager();
+    //rhoal robe
 }
 public boolean crear(Categoria categoria){
     em.getTransaction().begin();
