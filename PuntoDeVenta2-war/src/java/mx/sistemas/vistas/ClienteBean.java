@@ -6,11 +6,6 @@
 package mx.sistemas.vistas;
 
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.ZoneId;
-import java.util.Date;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -46,6 +41,25 @@ public class ClienteBean {
         Codigo c = clienteBL.agregar(p);
         
      
+        return "index.xhtml";
+    }
+    
+    public String editarPermiso(){
+        System.out.println("se edito con exito!!!");
+        
+        Cliente p = new Cliente(1,"Lalito","Orozco","H","Javie Mina #48","3325731485","roberch@gmail.com");
+        Codigo c = clienteBL.editar(p);
+        
+        
+        return "index.xhtml";
+    }
+    public String eliminarPermiso(){
+        System.out.println("se elimino con exito!!!");
+        
+        Cliente p = new Cliente(1);
+        Codigo c = clienteBL.eliminar(p);
+        
+        
         return "index.xhtml";
     }
     
