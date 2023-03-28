@@ -40,7 +40,7 @@ public class ClienteBL implements ClienteLocal {
     public Codigo editar(Cliente cliente) {
         ClienteDAO clientedao = new ClienteDAO();
         Cliente m = clientedao.getPorId(cliente.getId());
-        clientedao.eliminar(cliente);
+        clientedao.editar(cliente);
         return Codigo.NADA;
     }
 
@@ -48,7 +48,8 @@ public class ClienteBL implements ClienteLocal {
     public Codigo eliminar(Cliente cliente) {
         ClienteDAO clientedao = new ClienteDAO();
         Cliente tmp = clientedao.getPorId(cliente.getId());
-        clientedao.editar(cliente);
+        clientedao.eliminar(cliente);
+       
         return Codigo.NADA;
     }
 
