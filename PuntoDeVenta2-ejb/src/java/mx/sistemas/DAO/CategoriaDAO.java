@@ -25,6 +25,7 @@ public CategoriaDAO(){
     em= emf.createEntityManager();
     //rhoal robe
     //hola mmigus
+    //aguanta
 }
 public boolean crear(Categoria categoria){
     em.getTransaction().begin();
