@@ -58,12 +58,15 @@ public class ClienteDAO implements Serializable{
         q.setParameter("id", id);
         if(!q.getResultList().isEmpty()){
             
-            return (Cliente)q.getResultList().get(0);//lista de resultados obtiene el primero
+            return (Cliente)q.getResultList().get(1);//lista de resultados obtiene el primero
         
         }
         return null;
     }
     public Cliente getPorNombre(String nombre){
+        return null;
+    }
+    public Cliente getPorApellido(String apellido){
         return null;
     }
    

@@ -56,7 +56,7 @@ public class ClienteBean {
     public String eliminarPermiso(){
         System.out.println("se elimino con exito!!!");
         
-        Cliente p = new Cliente(1);
+        Cliente p = new Cliente(1,"Lalito","Orozco","H","Javie Mina #48","3325731485","roberch@gmail.com");
         Codigo c = clienteBL.eliminar(p);
         
         
