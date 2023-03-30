@@ -21,7 +21,7 @@ public class PermisoDAO implements Serializable{
     private EntityManager em;
     
     public PermisoDAO(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("PuntodeVenta-ejbPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("PuntoDeVenta2-ejbPU");
         em=emf.createEntityManager();
     }
     
@@ -30,6 +30,15 @@ public class PermisoDAO implements Serializable{
         //Faltan validaciones
         em.getTransaction().begin();
         em.persist(permiso);//persist es para guardar
+        em.getTransaction().commit();
+        return true;        
+    }
+    
+     public boolean Buscar(Permiso permiso){
+        //Crea 0 para todo esya bien 1 id mal, 2 para nombre esta mal
+        //Faltan validaciones
+        em.getTransaction().begin();
+        em.equals(permiso);
         em.getTransaction().commit();
         return true;        
     }
@@ -54,8 +63,8 @@ public class PermisoDAO implements Serializable{
     }
     
     public Permiso getPorId(int id){
-        Query q= em.createNamedQuery("Permiso.findByIdPermiso");
-        q.setParameter("idPermiso", id);
+        Query q= em.createNamedQuery("Permiso.findById");
+        q.setParameter("id", id);
         if (q.getResultList()!=null) {
             return (Permiso)q.getResultList().get(0);
         }else{

@@ -11,62 +11,62 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import mx.sistemas.modelo.Proveedor;
+import mx.sistemas.modelo.PerfilHasPermisos;
 
 /**
  *
  * @author 
  */
-public class ProveedorDAO implements Serializable{
+public class PerfilhasPermisosDAO implements Serializable{
     
     private EntityManager em ;
     
-    public  ProveedorDAO (){
+    public PerfilhasPermisosDAO(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("PuntoDeVenta2-ejbPU");//este nombre se saco del archivo llamado persistence.xml
         em=emf.createEntityManager();
     }
     
-    public boolean crear(Proveedor provedor){
+    public boolean crear(PerfilHasPermisos pp){
         //Faltan Validaciones.
         em.getTransaction().begin();
-        em.persist(provedor); //Guardar
+        em.persist(pp); //Guardar
         em.getTransaction().commit();
     return true;
     }
-    public boolean editar(Proveedor provedor){
-        if (provedor.getId()==null) {
-            return false;
-        }else{
+    public boolean editar(PerfilHasPermisos pp){
         em.getTransaction().begin();
-        em.merge(provedor); //Actualiza
+        em.merge(pp); //Actualiza
         em.getTransaction().commit();
         return true;
         
         }
-    }
-    public boolean eliminar(Proveedor provedor){
+    
+    public boolean eliminar(PerfilHasPermisos pp){
         em.getTransaction().begin();
-        em.remove(em.merge(provedor));
+        em.remove(em.merge(pp));
         em.getTransaction().commit();
         return true;
     }
-    //robe y migue me la pelan
-    public Proveedor getPorId(String id){
-        Query q = em.createNamedQuery("Proveedor.findById");
-        q.setParameter("id", id);
+    
+    
+   public PerfilHasPermisos getPorId(int id){
+        Query q = em.createNamedQuery("PerfilHasPermisos.findById");
+        q.setParameter("idPerfil", id);
         if(!q.getResultList().isEmpty()){
             
-            return (Proveedor)q.getResultList().get(0);//lista de resultados obtiene el primero
+            return (PerfilHasPermisos)q.getResultList().get(0);//lista de resultados obtiene el primero
         
         }
         return null;
     }
-    public Proveedor getPorNombre(String nombre){
-        return null;
-    }
+    
    
-    public List<Proveedor> getTodo(){
-         Query q = em.createNamedQuery("Proveedor.findAll");
+    public List<PerfilHasPermisos> getTodo(){
+         Query q = em.createNamedQuery("PerfilHasPermisos.findAll");
         return q.getResultList();
     }
+
+    
+
+    
 }

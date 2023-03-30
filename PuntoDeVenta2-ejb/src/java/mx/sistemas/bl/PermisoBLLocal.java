@@ -15,11 +15,15 @@ import mx.sistemas.modelo.Permiso;
  */
 @Local
 public interface PermisoBLLocal {
+
+  
     
     Codigo agregar(Permiso permiso);
 
     Codigo editar(Permiso permiso);
 
     Codigo eliminar(Permiso permiso);
+    
+    Permiso Buscar (int id);
     
 }
