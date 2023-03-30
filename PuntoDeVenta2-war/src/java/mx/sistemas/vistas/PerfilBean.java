@@ -43,14 +43,15 @@ public  String  accion(){
         List <PerfilHasPermisos> lista = new ArrayList<>();
         
         PerfilHasPermisos php = new PerfilHasPermisos(0);
-        php.setPerfilid(p); 
+        php.setPerfilid(p);
+        
          php.setPermisoid(permisoBL.Buscar(1));
         lista.add(php);
         p.setPerfilHasPermisosList(lista);
         
         PerfilHasPermisos php2 = new PerfilHasPermisos(0);
         php2.setPerfilid(p); 
-         php2.setPermisoid(permisoBL.Buscar(2 ));
+        php2.setPermisoid(permisoBL.Buscar(2));
         lista.add(php2);
         p.setPerfilHasPermisosList(lista);
         

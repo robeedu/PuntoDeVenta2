@@ -51,7 +51,7 @@ public class PerfilhasPermisosDAO implements Serializable{
     
    public PerfilHasPermisos getPorId(int id){
         Query q = em.createNamedQuery("PerfilHasPermisos.findById");
-        q.setParameter("idPerfil", id);
+        q.setParameter("id", id);
         if(!q.getResultList().isEmpty()){
             
             return (PerfilHasPermisos)q.getResultList().get(0);//lista de resultados obtiene el primero

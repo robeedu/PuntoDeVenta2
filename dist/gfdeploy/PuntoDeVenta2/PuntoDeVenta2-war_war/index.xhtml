@@ -9,9 +9,26 @@
         <h:form>
                     <h:commandButton action="#{perfilBean.accion()}" value="accion Perfil"></h:commandButton>
                     <h:commandButton action="#{permisoBean.accion()}" value="accion Permiso"></h:commandButton>
+                    <h:commandButton action="#{clienteBean.accion()}" value="accion Cliente"></h:commandButton>
+                     <h:commandButton action="#{clienteBean.editar()}" value="Editar Cliente"></h:commandButton>
+                    <h:commandButton action="#{clienteBean.eliminar()}" value="Eliminar Cliente"></h:commandButton>
+                    
+                    
+                   
+
                    
         </h:form>
             
+        <h:form>
+            <h:commandButton action="#{categoriaBean.add()}" value="agregar categoria"></h:commandButton>
+            <h:commandButton action="#{categoriaBean.delete()}" value="eliminar Permiso"></h:commandButton>
+            <h:commandButton action="#{categoriaBean.modify()}" value="modificar Cliente"></h:commandButton>
+                    
+                    
+                   
+
+                   
+        </h:form>
     </h:body>
 </html>
 

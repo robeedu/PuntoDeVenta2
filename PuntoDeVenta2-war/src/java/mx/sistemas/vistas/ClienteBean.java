@@ -47,7 +47,7 @@ public class ClienteBean {
     public String editar(){
         System.out.println("se edito con exito!!!");
         
-        Cliente p = new Cliente(1,"Lalito","Orozco","H","Javie Mina #48","3325731485","roberch@gmail.com");
+        Cliente p = new Cliente(3,"Lalito","Orozco","H","Javie Mina #48","3325731485","roberch@gmail.com");
         Codigo c = clienteBL.editar(p);
         
         
@@ -56,7 +56,7 @@ public class ClienteBean {
     public String eliminar(){
         System.out.println("se elimino con exito!!!");
         
-        Cliente p = new Cliente(1,"Lalito","Orozco","H","Javie Mina #48","3325731485","roberch@gmail.com");
+        Cliente p = new Cliente(3,"Lalito","Orozco","H","Javie Mina #48","3325731485","roberch@gmail.com");
         Codigo c = clienteBL.eliminar(p);
         
         

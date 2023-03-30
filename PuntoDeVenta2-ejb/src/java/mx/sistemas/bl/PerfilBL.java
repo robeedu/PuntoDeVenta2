@@ -10,7 +10,7 @@ import mx.sistemas.DAO.PerfilDAO;
 import mx.sistemas.DAO.PerfilhasPermisosDAO;
 import mx.sistemas.error.Codigo;
 import mx.sistemas.modelo.Perfil;
-import mx.sistemas.modelo.PerfilHasPermisos;
+
 
 /**
  *
