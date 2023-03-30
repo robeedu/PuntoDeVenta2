@@ -35,6 +35,7 @@ public CategoriaDAO(){
 //robe  me la seguira pelando bien gachosdfsdf
 public boolean crear(Categoria categoria){
     em.getTransaction().begin();
+    //hola robe
     em.persist(categoria);
     em.getTransaction().commit();
     return true;
