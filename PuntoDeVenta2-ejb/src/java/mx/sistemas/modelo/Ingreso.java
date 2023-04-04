@@ -108,13 +108,13 @@ public class Ingreso implements Serializable {
     }
 
     @XmlTransient
-    public List<Producto> getProductoList() {
-        return productoList;
-    }
+    //public List<Producto> getProductoList() {
+       // return productoList;
+    //}
 
-    public void setProductoList(List<Producto> productoList) {
-        this.productoList = productoList;
-    }
+    //public void setProductoList(List<Producto> productoList) {
+       // this.productoList = productoList;
+    //}
 
     @Override
     public int hashCode() {

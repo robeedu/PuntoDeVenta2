@@ -48,7 +48,7 @@ public class ClienteBL implements ClienteLocal {
     public Codigo eliminar(Cliente cliente) {
         ClienteDAO clientedao = new ClienteDAO();
         Cliente tmp = clientedao.getPorId(cliente.getId());
-        clientedao.eliminar(cliente);
+        boolean eliminar = clientedao.eliminar(cliente);
        
         return Codigo.NADA;
     }

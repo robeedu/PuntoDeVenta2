@@ -99,5 +99,7 @@ public class PerfilHasPermisos implements Serializable {
     public String toString() {
         return "mx.sistemas.modelo.PerfilHasPermisos[ id=" + id + " ]";
     }
+
+    
     
 }

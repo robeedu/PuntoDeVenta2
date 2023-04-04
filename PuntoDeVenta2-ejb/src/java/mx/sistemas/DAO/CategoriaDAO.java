@@ -21,7 +21,7 @@ public class CategoriaDAO implements Serializable{
 private EntityManager em;
 
 public CategoriaDAO(){
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("PuntodeVenta-ejbPU");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("PuntoDeVenta2-ejbPU");
     em= emf.createEntityManager();
     //rhoal robe
     //hola mmigus
@@ -35,6 +35,7 @@ public CategoriaDAO(){
 //robe  me la seguira pelando bien gachosdfsdf
 public boolean crear(Categoria categoria){
     em.getTransaction().begin();
+    //hola robe
     em.persist(categoria);
     em.getTransaction().commit();
     return true;

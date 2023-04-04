@@ -6,9 +6,7 @@
 package mx.sistemas.modelo;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,13 +14,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-///Rober 
+
 /**
  *
  * @author Rober
@@ -51,8 +47,6 @@ public class Categoria implements Serializable {
     @Size(max = 256)
     @Column(name = "decripcion")
     private String decripcion;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "categoriaid")
-    private List<Producto> productoList;
 
     public Categoria() {
     }
@@ -88,15 +82,6 @@ public class Categoria implements Serializable {
 
     public void setDecripcion(String decripcion) {
         this.decripcion = decripcion;
-    }
-
-    @XmlTransient
-    public List<Producto> getProductoList() {
-        return productoList;
-    }
-
-    public void setProductoList(List<Producto> productoList) {
-        this.productoList = productoList;
     }
 
     @Override

@@ -23,11 +23,6 @@ public class PermisoBL implements PermisoBLLocal {
         }
             
             PermisoDAO permisoDAO = new PermisoDAO();
-//            Permiso tmp = permisoDAO.getPorId(permiso.getIdPermiso());
-//            
-//            if (tmp != null) {
-//               return Codigo.ID_DUPLICATE;
-//            }
             permisoDAO.crear(permiso);
             System.out.println("si llega");
             return Codigo.NADA;
@@ -47,6 +42,12 @@ public class PermisoBL implements PermisoBLLocal {
         permisoDAO.eliminar(permiso);
 
         return Codigo.NADA;
+    }
+    @Override
+    public Permiso Buscar(int id) {
+       PermisoDAO permisoDAO =new PermisoDAO();
+        
+        return permisoDAO.getPorId(id);
     }
 
     // Add business logic below. (Right-click in editor and choose
