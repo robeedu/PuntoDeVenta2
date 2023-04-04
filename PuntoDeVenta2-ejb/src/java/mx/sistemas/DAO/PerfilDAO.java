@@ -52,7 +52,7 @@ public class PerfilDAO implements Serializable{
     }
     public Perfil getPorId(int id){
         Query q = em.createNamedQuery("Perfil.findById");
-        q.setParameter("idPerfil", id);
+        q.setParameter("id", id);
         if(!q.getResultList().isEmpty()){
             
             return (Perfil)q.getResultList().get(0);//lista de resultados obtiene el primero

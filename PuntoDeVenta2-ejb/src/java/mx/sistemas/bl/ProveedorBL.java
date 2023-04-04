@@ -38,7 +38,7 @@ public class ProveedorBL implements ProveedorLocal {
     public Codigo editar(Proveedor provedor) {
         ProveedorDAO  proveedorDAO = new ProveedorDAO ();
         Proveedor m = proveedorDAO.getPorId(provedor.getId());
-        proveedorDAO.eliminar(provedor);
+        proveedorDAO.editar(provedor);
         return Codigo.NADA;
     }
 
@@ -46,7 +46,7 @@ public class ProveedorBL implements ProveedorLocal {
     public Codigo eliminar(Proveedor provedor) {
         ProveedorDAO proveedorDAO = new ProveedorDAO();
         Proveedor tmp = proveedorDAO.getPorId(provedor.getId());
-        proveedorDAO.editar(provedor);
+        proveedorDAO.eliminar(provedor);
         return Codigo.NADA;
     }
 

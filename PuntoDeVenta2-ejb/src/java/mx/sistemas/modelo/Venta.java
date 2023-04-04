@@ -65,7 +65,7 @@ public class Venta implements Serializable {
     @ManyToOne(optional = false)
     private Usuario usuarioid;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ventaid")
-    private List<DetalleVenta> detalleVentaList;
+        private List<DetalleVenta> detalleVentaList;
 
     public Venta() {
     }
@@ -74,10 +74,12 @@ public class Venta implements Serializable {
         this.id = id;
     }
 
-    public Venta(Integer id, Date fecha, String total) {
+    public Venta(Integer id, Date fecha, String total,Integer Cliente_id,Integer Usuario_id) {
         this.id = id;
         this.fecha = fecha;
         this.total = total;
+        this.clienteid=clienteid;
+        this.usuarioid=usuarioid;
     }
 
     public Integer getId() {

@@ -23,6 +23,8 @@ public interface ClienteLocal {
 
     Codigo eliminar(Cliente cliente);
 
+    Cliente buscarPorId(int id);
+
    
     
 }

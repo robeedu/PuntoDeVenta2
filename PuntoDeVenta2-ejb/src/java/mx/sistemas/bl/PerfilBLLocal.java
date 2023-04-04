@@ -21,6 +21,9 @@ public interface PerfilBLLocal {
     Codigo editar(Perfil perfil);
 
     Codigo eliminar(Perfil perfil);
+    
+    Perfil Buscar (int id);
+            
 
    
     

@@ -53,4 +53,12 @@ public class ClienteBL implements ClienteLocal {
         return Codigo.NADA;
     }
 
+    @Override
+    public Cliente buscarPorId(int id) {
+        ClienteDAO clienteDAO= new ClienteDAO();
+        return clienteDAO.getPorId(id);
+    }
+    
+    
+
 }

@@ -7,8 +7,10 @@ package mx.sistemas.bl;
 
 import javax.ejb.Stateless;
 import mx.sistemas.DAO.PerfilDAO;
+import mx.sistemas.DAO.UsuarioDAO;
 import mx.sistemas.error.Codigo;
 import mx.sistemas.modelo.Perfil;
+import mx.sistemas.modelo.Usuario;
 
 /**
  *
@@ -19,24 +21,11 @@ public class PerfilBL implements PerfilBLLocal {
 
     @Override
     public Codigo agregar(Perfil perfil) {
-       if(perfil==null){
-            return Codigo.ENTIDAD_NULA;
-        }
-        PerfilDAO perfilDAO =new PerfilDAO();
-//        Permiso tmp = permisoDAO.getPorId(permiso.getIdPermiso());
-//        if(tmp!=null){
-//            return Codigo.ID_DUPLICADO;
-//        }
-         perfilDAO.crear(perfil);
-        
+        PerfilDAO pdao =new PerfilDAO();
+        pdao.crear(perfil);//se guarda el perfil en la BD
+        UsuarioDAO usdao = new UsuarioDAO();
         return Codigo.NADA;
     }
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
-
-    
-
     @Override
     public Codigo eliminar(Perfil perfil) {
         PerfilDAO permisoDAO =new PerfilDAO();
@@ -51,6 +40,10 @@ public class PerfilBL implements PerfilBLLocal {
         Perfil tmp = permisoDAO.getPorId(perfil.getId());
         permisoDAO.editar(perfil);
         return Codigo.NADA;
+    }
+    public  Perfil Buscar(int id){
+        PerfilDAO pd = new PerfilDAO();
+        return pd.getPorId(id);
     }
 
     

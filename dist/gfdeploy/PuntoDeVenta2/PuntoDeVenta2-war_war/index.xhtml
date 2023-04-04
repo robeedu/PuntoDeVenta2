@@ -3,16 +3,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>PUNTO DE VENTA</title>
     </h:head>
     <h:body>
         <h:form>
                     <h:commandButton action="#{perfilBean.accion()}" value="accion Perfil"></h:commandButton>
+                    <h:commandButton action="#{perfilBean.editarPermiso()}" value="editar Perfil"></h:commandButton>
+                    <h:commandButton action="#{perfilBean.eliminarPermiso()}" value="eliminar Perfil"></h:commandButton>
+                    
+                    
+                    
                     <h:commandButton action="#{clienteBean.accion()}" value="accion Cliente"></h:commandButton>
                      <h:commandButton action="#{clienteBean.editarPermiso()}" value="Editar Cliente"></h:commandButton>
                     <h:commandButton action="#{clienteBean.eliminarPermiso()}" value="Eliminar Cliente"></h:commandButton>
+                    
+                    
+                    
                     <h:commandButton action="#{proveedorBean.accion()}" value="accion Proveedor"></h:commandButton>
-                   
+                    <h:commandButton action="#{proveedorBean.editarPermiso()}" value="editar Proveedor"></h:commandButton>
+                    <h:commandButton action="#{proveedorBean.eliminarPermiso()}" value="eliminar Proveedor"></h:commandButton>
+                    
+                    
+                    
+                    <h:commandButton action="#{VentaBean.agregar()}" value="accion Venta"></h:commandButton>
+                
+                    <h:commandButton style="background-color: blue; border-radius: 5px; margin-top: 50px" action="#{usuarioBean.accion()}" value="Agregar Usuario"></h:commandButton>
         </h:form>
             
     </h:body>

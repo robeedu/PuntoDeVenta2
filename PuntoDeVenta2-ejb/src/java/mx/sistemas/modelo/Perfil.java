@@ -122,5 +122,6 @@ public class Perfil implements Serializable {
     public String toString() {
         return "mx.sistemas.modelo.Perfil[ id=" + id + " ]";
     }
+
     
 }
